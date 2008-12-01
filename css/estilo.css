@@ -1,0 +1,254 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: Verdana, Arial;
+	font-size: 10pt;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+h1 {
+	font-size: 18pt;
+	font-weight: bolder;
+	text-align: center;
+}
+
+h2 {
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: left;
+}
+
+h3 {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+h4 {
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+}
+
+td:hover {
+    background-color: #EEEEEE;
+}
+
+.titulo {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.divErro{
+	width: 450px;
+	height: 50px;
+	background-color: #FF8800;
+	line-height: 25px;
+	border: 1px solid #000000;
+}
+
+.divErro a{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+.divErro a:visited{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+.divErro a:active{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+.divErro a:hover{
+	color: #0000AA;
+	text-decoration: underline;
+}
+
+.divConteudo:hover {
+    background-color: #EEEEEE;
+}
+
+.divConteudo a {
+	text-decoration: none;
+	color: blue;
+}
+
+.divConteudo a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+.divConteudo a:active {
+	text-decoration: none;
+	color: blue;
+}
+
+.divConteudo a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+.divRodape {
+	font-size: 9px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.tabMenu {
+	text-align: 'center';
+	background-color: black;
+}
+
+.divTitulo {
+	text-align: 'center';
+}
+
+.divTitulo:hover {
+    background-color: #EEEEEE;
+}
+
+.divMenu {
+	font-weight: bold;
+	color: #000000;
+	font-size: 9pt;
+}
+
+.divMenu a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.divMenu a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.divMenu a:active {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.divMenu a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #000000;
+}
+
+.divCreditos {
+    background-color: #FFFFFF;
+	color: #444444;
+	font-size: 12px;
+	margin-top: 18px;
+	
+}
+
+.divCreditos a{
+	color: #444444;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.divCreditos a:active{
+	color: #444444;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.divCreditos a:visited{
+	color: #444444;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.divCreditos a:hover{
+	color: #000099;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.divCreditos hr{
+	color: #666666;
+	size: 1px;
+	height: 1px;
+}
+
+.divCreditos:hover {
+    background-color: #EEEEEE;
+}
+
+.mapaBrasil {
+	margin-right: 3px;
+	margin-bottom: 3px;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+.legenda a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.legenda a:visited{
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.legenda a:active{
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.legenda a:hover{
+	text-decoration: underline;
+	font-weight: bold;
+	color: #000000;
+}
+
+.infMapa {
+	font-size: 10px;
+	color: #DDDDDD;
+}
+
+.fotoSubstancia {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-top: 2px;
+}
+
+.divSubstancia:hover {
+	background-color: #EEEEEE;
+}
+
+.btnVoltar a {
+	font-size: 10px;
+	color: #999999;
+	text-decoration: underline;
+}
+
+.btnVoltar a:hover {
+	font-size: 10px;
+	color: #000000;
+	text-decoration: underline;
+}
+
+.divRM {
+	margin-left: 60px;
+}

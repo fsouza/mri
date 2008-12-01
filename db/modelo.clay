@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clay-model clay-version="1.4.0">
+<database-model alias="Modelo Mri" author="Francisco" begin-script="DROP DATABASE IF EXISTS mri;&#13;&#10;CREATE DATABASE mri;&#13;&#10;USE mri;" end-script="" name="modelo_mri" remarks="" sql-dialect-id="jp.azzurri.clay.dialect.MySQL_5_0_Dialect" uid="36ef21:119671e85a6:-8000" version="1.0">
+<database-model-description>Modelo de dados da aplicação do MRI desenvolvido em pesquisa com Francisco Antônio da Silva Souza.</database-model-description>
+<schema-list>
+<schema alias="Mri" name="mri" remarks="" uid="36ef21:119671e85a6:-7ffd">
+<schema-description/>
+<domain-list/>
+<table-list>
+<table alias="Reserva Mineral" name="reserva_mineral" remarks="" uid="36ef21:119671e85a6:-7fff">
+<table-description/>
+<table-figure-bounds height="100" width="157" x="16" y="15"/>
+<column-list>
+<column alias="Idt Reserva Mineral" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_reserva_mineral" remarks="" uid="36ef21:119671e85a6:-7ffa">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Medida" auto-increment="false" column-size="20" decimal-digits="0" default-value="" mandatory="true" name="medida" remarks="" uid="36ef21:119671e85a6:-7ff8">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Indicada" auto-increment="false" column-size="20" decimal-digits="0" default-value="" mandatory="true" name="indicada" remarks="" uid="36ef21:119671e85a6:-7ff7">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Inferida" auto-increment="false" column-size="20" decimal-digits="0" default-value="" mandatory="true" name="inferida" remarks="" uid="36ef21:119671e85a6:-7ff6">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Lavravel" auto-increment="false" column-size="20" decimal-digits="0" default-value="" mandatory="true" name="lavravel" remarks="" uid="36ef21:119671e85a6:-7ff5">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Fk Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_substancia" remarks="" uid="ca5a40:1196d0b3b9b:-7f75">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_RESERVA_MINERAL" remarks="" uid="36ef21:119671e85a6:-7ffe">
+<primary-key-description/>
+<primary-key-column name="idt_reserva_mineral"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_ReservaMineral_Substancia" on-delete="" on-update="" referenced-key="PK_SUBSTANCIA" referenced-table="substancia" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="1" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="ca5a40:1196d0b3b9b:-7f76">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_substancia" referenced-key-column-name="idt_substancia"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Producao Bruta" name="producao_bruta" remarks="" uid="36ef21:119671e85a6:-7ff2">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="622" y="68"/>
+<column-list>
+<column alias="Idt Producao Bruta" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_producao_bruta" remarks="" uid="36ef21:119671e85a6:-7fee">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Quantidade Produzida" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="quantidade_produzida" remarks="" uid="36ef21:119671e85a6:-7fe9">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Quantidade Comercializada" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="quantidade_comercializada" remarks="" uid="36ef21:119671e85a6:-7fe8">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Valor Comercializado" auto-increment="false" column-size="14" decimal-digits="2" default-value="" mandatory="true" name="valor_comercializado" remarks="" uid="36ef21:119671e85a6:-7fe7">
+<column-description/>
+<data-type jdbc-type="8" name="DOUBLE" selected-variant-pattern="DOUBLE(%p, %s)">
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s)"/>
+<variant type-name-pattern="DOUBLE"/>
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s) UNSIGNED"/>
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s) UNSIGNED ZEROFILL"/>
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s) ZEROFILL"/>
+<variant type-name-pattern="DOUBLE UNSIGNED"/>
+<variant type-name-pattern="DOUBLE UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="DOUBLE ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Contido" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="contido" remarks="" uid="36ef21:119671e85a6:-7fe6">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Teor Medio" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="teor_medio" remarks="" uid="36ef21:119671e85a6:-7fe5">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_substancia" remarks="" uid="ca5a40:1196d0b3b9b:-7f2d">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PRODUCAO_BRUTA" remarks="" uid="36ef21:119671e85a6:-7ff1">
+<primary-key-description/>
+<primary-key-column name="idt_producao_bruta"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_ProducaoBruta_Substancia" on-delete="" on-update="" referenced-key="PK_SUBSTANCIA" referenced-table="substancia" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="1" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="ca5a40:1196d0b3b9b:-7f2e">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_substancia" referenced-key-column-name="idt_substancia"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Producao Beneficiada" name="producao_beneficiada" remarks="" uid="36ef21:119671e85a6:-7fe4">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="561" y="271"/>
+<column-list>
+<column alias="Idt Producao Beneficiada" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_producao_beneficiada" remarks="" uid="36ef21:119671e85a6:-7fe0">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Quantidade Produzida" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="quantidade_produzida" remarks="" uid="36ef21:119671e85a6:-7fd8">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Quantidade Comercializada" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="quantidade_comercializada" remarks="" uid="36ef21:119671e85a6:-7fd7">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Valor Comercializado" auto-increment="false" column-size="14" decimal-digits="2" default-value="" mandatory="true" name="valor_comercializado" remarks="" uid="36ef21:119671e85a6:-7fd6">
+<column-description/>
+<data-type jdbc-type="8" name="DOUBLE" selected-variant-pattern="DOUBLE(%p, %s)">
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s)"/>
+<variant type-name-pattern="DOUBLE"/>
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s) UNSIGNED"/>
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s) UNSIGNED ZEROFILL"/>
+<variant precision-max="255" precision-min="0" precision-variable="%p" scale-max="30" scale-min="0" scale-variable="%s" type-name-pattern="DOUBLE(%p, %s) ZEROFILL"/>
+<variant type-name-pattern="DOUBLE UNSIGNED"/>
+<variant type-name-pattern="DOUBLE UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="DOUBLE ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Contido" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="contido" remarks="" uid="36ef21:119671e85a6:-7fd5">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Teor Medio" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="teor_medio" remarks="" uid="36ef21:119671e85a6:-7fd4">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Producao Bruta" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="fk_producao_bruta" remarks="" uid="36ef21:119671e85a6:-7f95">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_substancia" remarks="" uid="ca5a40:1196d0b3b9b:-7f13">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PRODUCAO_BENEFICIADA" remarks="" uid="36ef21:119671e85a6:-7fe3">
+<primary-key-description/>
+<primary-key-column name="idt_producao_beneficiada"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="Fk Producao Beneficiada Producao Bruta" name="FK_ProducaoBeneficiada_ProducaoBruta" on-delete="" on-update="" referenced-key="PK_PRODUCAO_BRUTA" referenced-table="producao_bruta" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="0..1" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="36ef21:119671e85a6:-7f96">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_producao_bruta" referenced-key-column-name="idt_producao_bruta"/>
+</foreign-key>
+<foreign-key alias="" name="FK_ProducaoBeneficiada_Substancia" on-delete="" on-update="" referenced-key="PK_SUBSTANCIA" referenced-table="substancia" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="1" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="ca5a40:1196d0b3b9b:-7f14">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_substancia" referenced-key-column-name="idt_substancia"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Substancia" name="substancia" remarks="" uid="36ef21:119671e85a6:-7f44">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="26" y="209"/>
+<column-list>
+<column alias="Idt Substancia" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_substancia" remarks="" uid="36ef21:119671e85a6:-7f40">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Nome Substancia" auto-increment="false" column-size="100" decimal-digits="0" default-value="" mandatory="true" name="nome_substancia" remarks="" uid="36ef21:119671e85a6:-7f3f">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Descricao Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="descricao_substancia" remarks="" uid="1a1d061:11995b895c8:-7ff6">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="Tipo Substancia" auto-increment="false" column-size="15" decimal-digits="0" default-value="" mandatory="true" name="tipo_substancia" remarks="" uid="36ef21:119671e85a6:-7f38">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="4000" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+</data-type>
+</column>
+<column alias="Fk Foto" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="fk_foto" remarks="" uid="1a1d061:11995b895c8:-7fe3">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Cor" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_cor" remarks="" uid="1523d40:119a93cc661:-7fdc">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_SUBSTANCIA" remarks="" uid="36ef21:119671e85a6:-7f43">
+<primary-key-description/>
+<primary-key-column name="idt_substancia"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_substancia_foto" on-delete="" on-update="" referenced-key="PK_FOTO" referenced-table="foto" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="1" source-relationship-type="" target-entity-role="" target-multiplicity="0..1" target-relationship-type="" uid="1a1d061:11995b895c8:-7fe4">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_foto" referenced-key-column-name="idt_foto"/>
+</foreign-key>
+<foreign-key alias="" name="FK_substancia_cor" on-delete="" on-update="" referenced-key="PK_COR" referenced-table="cor" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="1523d40:119a93cc661:-7fdd">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_cor" referenced-key-column-name="idt_cor"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Foto" name="foto" remarks="" uid="ca5a40:1196d0b3b9b:-7fa2">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="212" y="52"/>
+<column-list>
+<column alias="Idt Foto" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_foto" remarks="" uid="ca5a40:1196d0b3b9b:-7f9e">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Mimetype" auto-increment="false" column-size="30" decimal-digits="0" default-value="" mandatory="true" name="mimetype" remarks="" uid="ca5a40:1196d0b3b9b:-7f9d">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Foto" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="foto" remarks="" uid="ca5a40:1196d0b3b9b:-7f9c">
+<column-description/>
+<data-type jdbc-type="-4" literal-prefix="'" literal-suffix="'" name="MEDIUMBLOB" selected-variant-pattern="MEDIUMBLOB">
+<variant type-name-pattern="MEDIUMBLOB"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_FOTO" remarks="" uid="ca5a40:1196d0b3b9b:-7fa1">
+<primary-key-description/>
+<primary-key-column name="idt_foto"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="Lavra Usina" name="lavra_usina" remarks="" uid="ca5a40:1196d0b3b9b:-7f95">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="-56" y="347"/>
+<column-list>
+<column alias="Idt Lavra Usina" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_lavra_usina" remarks="" uid="ca5a40:1196d0b3b9b:-7f91">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Qtd Media" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="qtd_media" remarks="" uid="ca5a40:1196d0b3b9b:-7f90">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Qtd Pequena" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="qtd_pequena" remarks="" uid="ca5a40:1196d0b3b9b:-7f8f">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Qtd Grande" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="qtd_grande" remarks="" uid="ca5a40:1196d0b3b9b:-7f8e">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_substancia" remarks="" uid="ca5a40:1196d0b3b9b:-7ee8">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_LAVRA_USINA" remarks="" uid="ca5a40:1196d0b3b9b:-7f94">
+<primary-key-description/>
+<primary-key-column name="idt_lavra_usina"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_LavraUsina_Substancia" on-delete="" on-update="" referenced-key="PK_SUBSTANCIA" referenced-table="substancia" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="1" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="ca5a40:1196d0b3b9b:-7ee9">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_substancia" referenced-key-column-name="idt_substancia"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Lavra Mina" name="lavra_mina" remarks="" uid="ca5a40:1196d0b3b9b:-7f8d">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="440" y="413"/>
+<column-list>
+<column alias="Idt Lavra Mina" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_lavra_mina" remarks="" uid="ca5a40:1196d0b3b9b:-7f89">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Qtd Media" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="qtd_media" remarks="" uid="ca5a40:1196d0b3b9b:-7f86">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Qtd Pequena" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="qtd_pequena" remarks="" uid="ca5a40:1196d0b3b9b:-7f85">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Qtd Grande" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="qtd_grande" remarks="" uid="ca5a40:1196d0b3b9b:-7f84">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_substancia" remarks="" uid="ca5a40:1196d0b3b9b:-7ef9">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_LAVRA_MINA" remarks="" uid="ca5a40:1196d0b3b9b:-7f8c">
+<primary-key-description/>
+<primary-key-column name="idt_lavra_mina"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_LavraMina_Substancia" on-delete="" on-update="" referenced-key="PK_SUBSTANCIA" referenced-table="substancia" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="1" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="ca5a40:1196d0b3b9b:-7efa">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_substancia" referenced-key-column-name="idt_substancia"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Cidade" name="cidade" remarks="" uid="1d021b9:119a17a91fe:-7ff8">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="106" y="546"/>
+<column-list>
+<column alias="Idt Cidade" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_cidade" remarks="" uid="1d021b9:119a17a91fe:-7ff4">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Nome Cidade" auto-increment="false" column-size="100" decimal-digits="0" default-value="" mandatory="true" name="nome_cidade" remarks="" uid="1d021b9:119a17a91fe:-7ff1">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_CIDADE" remarks="" uid="1d021b9:119a17a91fe:-7ff7">
+<primary-key-description/>
+<primary-key-column name="idt_cidade"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="Substancias Cidade" name="substancias_cidade" remarks="" uid="1d021b9:119a17a91fe:-7f47">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="96" y="420"/>
+<column-list>
+<column alias="Idt Substancia Cidade" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_substancias_cidade" remarks="" uid="1d021b9:119a17a91fe:-7f43">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Substancia" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_substancia" remarks="" uid="1d021b9:119a17a91fe:-7eea">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Fk Cidade" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="fk_cidade" remarks="" uid="1d021b9:119a17a91fe:-7ed1">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_SUBSTANCIAS_CIDADE" remarks="" uid="1d021b9:119a17a91fe:-7f46">
+<primary-key-description/>
+<primary-key-column name="idt_substancias_cidade"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_substancia_cidade_substancia" on-delete="" on-update="" referenced-key="PK_SUBSTANCIA" referenced-table="substancia" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="1d021b9:119a17a91fe:-7eeb">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_substancia" referenced-key-column-name="idt_substancia"/>
+</foreign-key>
+<foreign-key alias="" name="FK_substancia_cidade_cidade" on-delete="" on-update="" referenced-key="PK_CIDADE" referenced-table="cidade" referenced-table-schema="mri" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="1d021b9:119a17a91fe:-7ed2">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="fk_cidade" referenced-key-column-name="idt_cidade"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="Cor" name="cor" remarks="" uid="1523d40:119a93cc661:-7ff6">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="384" y="50"/>
+<column-list>
+<column alias="Idt Cor" auto-increment="true" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="idt_cor" remarks="" uid="1523d40:119a93cc661:-7ff2">
+<column-description/>
+<data-type jdbc-type="4" name="INTEGER" selected-variant-pattern="INTEGER">
+<variant type-name-pattern="INTEGER"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n)"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) UNSIGNED ZEROFILL"/>
+<variant precision-max="10" precision-min="0" precision-variable="%n" type-name-pattern="INTEGER(%n) ZEROFILL"/>
+<variant type-name-pattern="INTEGER UNSIGNED"/>
+<variant type-name-pattern="INTEGER UNSIGNED ZEROFILL"/>
+<variant type-name-pattern="INTEGER ZEROFILL"/>
+</data-type>
+</column>
+<column alias="Hex" auto-increment="false" column-size="6" decimal-digits="0" default-value="" mandatory="true" name="hex" remarks="" uid="1523d40:119a93cc661:-7fb0">
+<column-description/>
+<data-type jdbc-type="1" literal-prefix="'" literal-suffix="'" name="CHAR" selected-variant-pattern="CHAR(%n)">
+<variant precision-max="255" precision-min="0" precision-variable="%n" type-name-pattern="CHAR(%n)"/>
+<variant type-name-pattern="CHAR"/>
+<variant precision-max="255" precision-min="0" precision-variable="%n" type-name-pattern="CHAR(%n) BINARY"/>
+</data-type>
+</column>
+<column alias="Nome Cor" auto-increment="false" column-size="50" decimal-digits="0" default-value="" mandatory="true" name="nome_cor" remarks="" uid="1523d40:119a93cc661:-7ff1">
+<column-description/>
+<data-type jdbc-type="12" literal-prefix="'" literal-suffix="'" name="VARCHAR" selected-variant-pattern="VARCHAR(%n)">
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n)"/>
+<variant precision-max="255" precision-min="1" precision-variable="%n" type-name-pattern="VARCHAR(%n) BINARY"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_COR" remarks="" uid="1523d40:119a93cc661:-7ff5">
+<primary-key-description/>
+<primary-key-column name="idt_cor"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+</table-list>
+</schema>
+</schema-list>
+</database-model>
+</clay-model>

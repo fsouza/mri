@@ -1,0 +1,73 @@
+[fedora-dries]
+name=Extra Fedora rpms dries - 6 - $basearch
+baseurl=http://ftp.riken.jp/Linux/dries/fedora/fc6/$basearch/dries/RPMS
+http://ftp.belnet.be/packages/dries.ulyssis.org/fedora/fc6/$basearch/dries/RPMS
+gpgkey=http://dries.ulyssis.org/rpm/RPM-GPG-KEY.dries.txt
+enabled=1
+gpgcheck=0
+
+[fedora-extras]
+name=Fedora Extras 6 - $basearch
+#baseurl=http://download.fedora.redhat.com/pub/fedora/linux/extras/6/$basearch/
+mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=extras-6&arch=$basearch
+#mirrorlist=file:///etc/yum.repos.d/local-extras
+enabled=1
+gpgkey=http://ftp.riken.jp/Linux/fedora/extras/RPM-GPG-KEY-Fedora-Extras
+gpgcheck=0
+
+[atrpms]
+name=Centos $releasever - $basearch - ATrpms
+baseurl=http://dl.atrpms.net/el$releasever-$basearch/atrpms/stable
+gpgkey=http://ATrpms.net/RPM-GPG-KEY.atrpms
+gpgcheck=0
+enable=1
+
+[dag]
+name = Dag
+enabled =1
+baseurl = http://dag.freshrpms.net/redhat/el4/en/$basearch/dag/
+http = //ftp.heanet.ie/pub/freshrpms/pub/dag/redhat/el4/en/$basearch/dag/
+gpgcheck =0
+
+[dries]
+name=Extra RedHat EL 4 rpms dries - $releasever - $basearch
+baseurl=http://apt.sw.be/dries/redhat/el4/en/$basearch/dries/RPMS
+gpgcheck=0
+enabled=1
+gpgkey=http://dries.ulyssis.org/ayo/RPM-GPG-KEY.dries.txt
+
+[jpackage-generic]
+name=JPackage (free), generic
+mirrorlist=http://www.jpackage.org/jpackage_generic.txt
+failovermethod=priority
+gpgcheck=0
+gpgkey=http://www.jpackage.org/jpackage.asc
+enabled=1
+
+[kagesenshi]
+name=KageSenshi Package Repository
+baseurl=http://devel.foss.org.my/~kagesenshi/repo/pub/$basearch/
+enabled=0
+gpgcheck=0
+
+[livna]
+name=Fedora Core 4 - i386 - livna
+baseurl=http://rpm.livna.org/fedora/4/i386/RPMS.lvn
+failovermethod=priority
+
+[pbone.net]
+name=Centos-$releasever
+baseurl=ftp://ftp.pbone.net/mirror/ftp.centos.org/$releasever/os/$basearch/
+gpgkey=ftp://ftp.pbone.net/mirror/ftp.centos.org/$releaserver/os/$basearch/RPM-GPG-KEY-CentOS-5
+gpgcheck=0
+enable=1
+
+[rpmforge]
+name = Red Hat Enterprise $releasever - RPMforge.net - dag
+#baseurl = http://apt.sw.be/redhat/el5/en/$basearch/dag
+mirrorlist = http://apt.sw.be/redhat/el5/en/mirrors-rpmforge
+#mirrorlist = file:///etc/yum.repos.d/mirrors-rpmforge
+enabled = 1
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+gpgcheck = 0 
